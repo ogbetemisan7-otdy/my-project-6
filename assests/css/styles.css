@@ -1,0 +1,249 @@
+*{
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+header {
+    background: linear-gradient(135deg, #ffffff, #f3d9ff, #ffffff);
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 3px 10px #ccc;
+    position: relative;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+    color: #7b2cbf;
+    text-shadow: 1px 1px 2px #aaa;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #7b2cbf;
+}
+
+.menu-button {
+    display: block;
+    background-color: #7b2cbf;
+    color: white;
+    border: none;
+    padding: 10px 14px;
+    font-size: 22px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.hero {
+    text-align: center;
+    padding: 65px 20px;
+    background: linear-gradient(120deg, #7b2cbf, #e0aaff);
+    color: white;
+}
+
+.hero h1 {
+    font-size: 38px;
+}
+
+.shop-button {
+    display: inline-block;
+    background-color: white;
+    color: #7b2cbf;
+    padding: 12px 25px;
+    margin-top: 15px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#products {
+    padding: 35px 5%;
+}
+
+#products h2,
+.about h2 {
+    text-align: center;
+    color: #7b2cbf;
+    font-size: 30px;
+}
+
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+.product {
+    background-color: white;
+    width: calc((100% - 50px) / 3);
+    min-width: 0;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px #ddd;
+    text-align: center;
+    position: relative;
+    transition: transform 0.3s;
+}
+
+.product:hover {
+    transform: translateY(-5px);
+}
+
+.product img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.product h3 {
+    color: #5a189a;
+}
+
+.product p {
+    line-height: 1.6;
+}
+
+.product h4 {
+    color: #138a36;
+    font-size: 18px;
+}
+
+.product-button {
+    display: inline-block;
+    background-color: #7b2cbf;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+}
+
+.product-button:hover {
+    background-color: #4c087d;
+}
+
+.hot-label {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #e63946;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.about {
+    background-color: #eee0ff;
+    padding: 35px 20px;
+    text-align: center;
+}
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #30104b;
+    color: white;
+}
+
+.contact-container {
+    max-width: 550px;
+    margin: 40px auto;
+    padding: 25px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 3px 15px #ddd;
+}
+
+.contact-container h1 {
+    text-align: center;
+    color: #7b2cbf;
+}
+
+.contact-container label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.contact-container input,
+.contact-container textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 7px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-family: Arial, sans-serif;
+}
+
+.contact-container textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+.contact-container button {
+    width: 100%;
+    padding: 13px;
+    margin-top: 20px;
+    background-color: #7b2cbf;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.contact-container button:hover {
+    background-color: #4c087d;
+}
+@media (max-width: 800px) {
+.product {
+    width: calc((100% - 25px) / 2);
+}
+nav {
+    gap: 12px;
+}
+}
+@media (max-width: 600px) {
+header {
+    flex-wrap: wrap;
+}
+nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    padding: 15px 0;
+}
+nav.show-menu {
+    display: flex;
+}
+.menu-button {
+    display: block;
+    margin-left: auto;
+}    
+.product {
+    width: 100%;
+}
+.hero h1 {
+    font-size: 28px;
+}
+}
